@@ -8,7 +8,7 @@ import requests
 class Functions:
     def __init__(self):
         # self.today = datetime.today().date().strftime("%Y%m%d")
-        self.today = (datetime.today().date() - timedelta(days=1)).strftime("%Y%m%d")
+        self.today = (datetime.today().date() - timedelta(days=0)).strftime("%Y%m%d")
         self.status = None
 
     def getPDF(self):
