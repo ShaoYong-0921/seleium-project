@@ -14,5 +14,6 @@ if __name__ == '__main__':
             df.to_excel(f'{f.today}.xlsx', index=False)
             print(df)
             print("excel表做好了ㄛ\n")
+            f.decoratePDF()
     
     print("End ...")
