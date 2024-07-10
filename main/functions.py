@@ -8,7 +8,7 @@ import requests
 class Functions:
     def __init__(self):
         # self.today = datetime.today().date().strftime("%Y%m%d")
-        self.today = (datetime.today().date() - timedelta(days=0)).strftime("%Y%m%d")
+        self.today = (datetime.today().date() - timedelta(days=1)).strftime("%Y%m%d")
         self.status = None
 
     def getPDF(self):
@@ -74,7 +74,7 @@ class Functions:
 
         for row in ws.iter_rows():
             for cell in row:
-                print(f'{cell = }')
+                # print(f'{cell = }')
                 cell.alignment = alignment
                 cell.border = border
                 cell.font = style
@@ -90,7 +90,7 @@ class Functions:
             ws[row].border =  border
 
 
-        for sheet in ws:
-            print(sheet)
+        # for sheet in ws:
+        #     print(sheet)
 
         wb.save("test.xlsx")
